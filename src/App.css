@@ -1,0 +1,8 @@
+/* Minimal overrides specific to the layout */
+#root {
+  max-width: 100%;
+}
+
+main {
+  padding-bottom: 2rem;
+}

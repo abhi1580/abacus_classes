@@ -1,0 +1,76 @@
+/* Abacus Classes theme (blue/white) */
+:root {
+  --ac-primary: #0d6efd;
+  --ac-dark: #0b5ed7;
+  --ac-light: #f8f9fa;
+  /* Project-wide gradient: vivid blue → indigo */
+  --ac-grad-start: #3aa0ff; /* bright sky blue */
+  --ac-grad-end: #6a5af9;  /* modern indigo */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--ac-light);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.bg-hero {
+  background:
+    linear-gradient(135deg, rgba(58, 160, 255, 0.75), rgba(106, 90, 249, 0.75)),
+    url('/hero-abacus.jpg') center/cover no-repeat;
+}
+
+/* About hero variant */
+.bg-hero-about {
+  background:
+    radial-gradient(60% 80% at 20% 10%, rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(135deg, var(--ac-grad-start), var(--ac-grad-end));
+  color: #fff;
+}
+
+.text-brand { color: var(--ac-primary); }
+
+/* Gradient utilities */
+.bg-gradient-brand { background-image: linear-gradient(135deg, var(--ac-grad-start), var(--ac-grad-end)); }
+
+.btn-gradient {
+  color: #fff !important;
+  background-image: linear-gradient(135deg, var(--ac-grad-start), var(--ac-grad-end));
+  border: 0;
+}
+.btn-gradient:hover { filter: brightness(0.95); }
+
+/* Extras */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.section-title {
+  font-weight: 800;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background-image: linear-gradient(135deg, var(--ac-grad-start), var(--ac-grad-end));
+}
