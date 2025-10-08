@@ -3,6 +3,19 @@ import { motion } from 'framer-motion'
 import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
+    const closeOnMobile = () => {
+        const nav = document.getElementById('navbarsExample')
+        if (nav && nav.classList.contains('show')) {
+            const bs = window.bootstrap
+            if (bs && bs.Collapse) {
+                const instance = bs.Collapse.getInstance(nav) || new bs.Collapse(nav, { toggle: false })
+                instance.hide()
+            } else {
+                const toggler = document.querySelector('[data-bs-target="#navbarsExample"]')
+                if (toggler) toggler.click()
+            }
+        }
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-gradient-brand sticky-top shadow-sm">
             <div className="container">
@@ -15,13 +28,13 @@ function Navbar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarsExample">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                        <li className="nav-item"><NavLink end className="nav-link" to="/">Home</NavLink></li>
-                        <li className="nav-item"><NavLink className="nav-link" to="/about">About Us</NavLink></li>
-                        <li className="nav-item"><NavLink className="nav-link" to="/courses">Courses</NavLink></li>
-                        <li className="nav-item"><NavLink className="nav-link" to="/gallery">Gallery</NavLink></li>
-                        <li className="nav-item me-lg-3"><NavLink className="nav-link" to="/contact">Contact</NavLink></li>
+                        <li className="nav-item"><NavLink end className="nav-link" to="/" onClick={closeOnMobile}>Home</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link" to="/about" onClick={closeOnMobile}>About Us</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link" to="/courses" onClick={closeOnMobile}>Courses</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link" to="/gallery" onClick={closeOnMobile}>Gallery</NavLink></li>
+                        <li className="nav-item me-lg-3"><NavLink className="nav-link" to="/contact" onClick={closeOnMobile}>Contact</NavLink></li>
                         <li className="nav-item d-none d-lg-block">
-                            <Link to="/contact" className="btn btn-light text-primary fw-semibold">Enroll Now</Link>
+                            <Link to="/contact" className="btn btn-light text-primary fw-semibold" onClick={closeOnMobile}>Enroll Now</Link>
                         </li>
                     </ul>
                 </div>
