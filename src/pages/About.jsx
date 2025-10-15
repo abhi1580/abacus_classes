@@ -5,33 +5,30 @@ function About() {
     return (
         <>
             {/* About Hero */}
-            <section className="py-5 bg-hero-about">
-                <div className="container">
-                    <div className="row align-items-center g-4">
-                        <div className="col-lg-8">
-                            <motion.h1 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="display-6 fw-bold">About SHASHWAT Abacus Academy</motion.h1>
-                            <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }} className="lead mb-0">
-                                Empowering young minds through proven abacus methodology, modern pedagogy, and personal attention.
-                            </motion.p>
-                        </div>
-                        <div className="col-lg-4 text-lg-end">
-                            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} viewport={{ once: true }}>
-                                <Link className="btn btn-light text-primary fw-semibold" to="/contact">Talk to Us</Link>
-                            </motion.div>
-                        </div>
-                    </div>
+            <section className="py-5 position-relative" style={{ background: 'linear-gradient(120deg, var(--ac-grad-end) 0%, var(--ac-grad-start) 100%)' }}>
+                <div className="container text-center text-white py-5 position-relative" style={{zIndex:2}}>
+                    <motion.h1 initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="display-4 fw-bold mb-2">
+                        About <span className="text-accent">SHASHWAT Abacus Academy</span>
+                    </motion.h1>
+                    <motion.p initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} viewport={{ once: true }} className="lead mb-4" style={{ fontSize: '1.25rem' }}>
+                        Empowering young minds through proven abacus methodology, modern pedagogy, and personal attention.
+                    </motion.p>
+                    <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} viewport={{ once: true }}>
+                        <Link className="btn btn-light text-primary fw-semibold px-4 py-2 shadow" to="/contact">Talk to Us</Link>
+                    </motion.div>
                 </div>
+                <div className="position-absolute top-0 start-0 w-100 h-100" style={{background:'radial-gradient(circle at 70% 30%, #fff2 0%, transparent 70%)', zIndex:1}}></div>
             </section>
 
             {/* Mission & Vision */}
-            <section className="py-5">
+            <section className="py-5" style={{ background: 'var(--ac-light)' }}>
                 <div className="container">
                     <div className="row g-4">
                         <div className="col-md-6">
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-bullseye"></i></span>
+                                        <span className="icon-circle bg-gradient-brand text-white shadow-sm"><i className="bi bi-bullseye"></i></span>
                                         <h5 className="card-title fw-semibold mb-0">Our Mission</h5>
                                     </div>
                                     <p className="card-text">To build confidence and a love for numbers by nurturing analytical thinking, concentration, and creativity.</p>
@@ -42,7 +39,7 @@ function About() {
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-eye"></i></span>
+                                        <span className="icon-circle bg-gradient-brand text-white shadow-sm"><i className="bi bi-eye"></i></span>
                                         <h5 className="card-title fw-semibold mb-0">Our Vision</h5>
                                     </div>
                                     <p className="card-text">To be a leading institute for holistic brain development through engaging and effective abacus education.</p>
@@ -54,14 +51,14 @@ function About() {
             </section>
 
             {/* Our Story & Methodology */}
-            <section className="py-5 bg-white">
+            <section className="py-5" style={{ background: 'var(--ac-light)' }}>
                 <div className="container">
                     <div className="row g-4">
                         <div className="col-lg-6">
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-book-half"></i></span>
+                                        <span className="icon-circle bg-gradient-brand text-white shadow-sm"><i className="bi bi-book-half"></i></span>
                                         <h3 className="card-title text-brand mb-0">Our Story</h3>
                                     </div>
                                     <p className="card-text">Founded by passionate educators, SHASHWAT began with a simple idea: make mathematics joyful and intuitive. Over the years, we have refined our curriculum to balance traditional abacus practice with brain gym activities, puzzles, and real-life applications.</p>
@@ -72,7 +69,7 @@ function About() {
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-diagram-3"></i></span>
+                                        <span className="icon-circle bg-gradient-brand text-white shadow-sm"><i className="bi bi-diagram-3"></i></span>
                                         <h3 className="card-title text-brand mb-0">Our Methodology</h3>
                                     </div>
                                     <ul className="mb-0 lh-lg">
@@ -89,14 +86,15 @@ function About() {
             </section>
 
             {/* Certifications & Highlights */}
-            <section className="py-5">
+            <div className="w-100" style={{height:'32px',background:'linear-gradient(90deg, var(--ac-grad-end) 0%, var(--ac-grad-start) 100%)'}}></div>
+            <section className="py-5" style={{ background: 'linear-gradient(120deg, var(--ac-grad-start) 0%, var(--ac-grad-end) 100%)' }}>
                 <div className="container">
                     <div className="row g-4">
                         <div className="col-md-4">
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-patch-check"></i></span>
+                                        <span className="icon-circle bg-white text-brand shadow-sm"><i className="bi bi-patch-check"></i></span>
                                         <h5 className="card-title fw-semibold mb-0">Certified Trainers</h5>
                                     </div>
                                     <p className="card-text mb-0">Our instructors hold nationally recognized certifications and undergo continuous training.</p>
@@ -107,7 +105,7 @@ function About() {
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.1 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-trophy"></i></span>
+                                        <span className="icon-circle bg-white text-brand shadow-sm"><i className="bi bi-trophy"></i></span>
                                         <h5 className="card-title fw-semibold mb-0">Competition Prep</h5>
                                     </div>
                                     <p className="card-text mb-0">Guidance for city, state, and national-level abacus and mental math competitions.</p>
@@ -118,7 +116,7 @@ function About() {
                             <motion.div className="card h-100 shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.2 }}>
                                 <div className="card-body">
                                     <div className="d-flex align-items-center gap-3 mb-2">
-                                        <span className="icon-circle"><i className="bi bi-people"></i></span>
+                                        <span className="icon-circle bg-white text-brand shadow-sm"><i className="bi bi-people"></i></span>
                                         <h5 className="card-title fw-semibold mb-0">Parental Engagement</h5>
                                     </div>
                                     <p className="card-text mb-0">Monthly progress reports and open sessions to discuss strategies at home.</p>
@@ -130,12 +128,13 @@ function About() {
             </section>
 
             {/* FAQ */}
-            <section className="py-5 bg-light">
+            <div className="w-100" style={{height:'32px',background:'linear-gradient(90deg, var(--ac-grad-start) 0%, var(--ac-grad-end) 100%)'}}></div>
+            <section className="py-5" style={{ background: 'var(--ac-light)' }}>
                 <div className="container">
                     <motion.div className="card shadow-sm" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                         <div className="card-body">
                             <div className="d-flex align-items-center gap-3 mb-2">
-                                <span className="icon-circle"><i className="bi bi-question-circle"></i></span>
+                                <span className="icon-circle bg-gradient-brand text-white shadow-sm"><i className="bi bi-question-circle"></i></span>
                                 <h3 className="mb-0 text-brand">Frequently Asked Questions</h3>
                             </div>
                             <div className="accordion" id="faq">

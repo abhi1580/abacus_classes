@@ -7,6 +7,7 @@ import About from './pages/About.jsx'
 import Courses from './pages/Courses.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Contact from './pages/Contact.jsx'
+import Franchisee from './pages/Franchisee.jsx'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/franchisee" element={<Franchisee />} />
           </Routes>
         </main>
         <Footer />

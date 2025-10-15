@@ -1,46 +1,141 @@
+
 import { motion } from 'framer-motion'
-
 function Courses() {
-    const courses = [
-        { name: 'Beginner', desc: 'Introduction to abacus, number sense, and basic operations.', fee: '₹3,000 / month', duration: '3 months', age: '5–7 yrs', sessions: '2 / week', icon: 'bi-seedling' },
-        { name: 'Intermediate', desc: 'Speed building, mental math techniques, and accuracy drills.', fee: '₹3,500 / month', duration: '4 months', age: '7–10 yrs', sessions: '2 / week', icon: 'bi-lightning' },
-        { name: 'Advanced', desc: 'Complex calculations, competitions prep, and mentoring.', fee: '₹4,000 / month', duration: '5 months', age: '10–12 yrs', sessions: '3 / week', icon: 'bi-trophy' },
-    ]
-
     return (
         <>
-            <section className="py-5 bg-gradient-brand text-white">
-                <div className="container">
-                    <h1 className="h2 fw-bold mb-1">Courses</h1>
-                    <p className="mb-0">Structured levels to build speed, accuracy, and confidence step-by-step.</p>
+            {/* Hero Section */}
+            <section className="py-5" style={{ background: 'linear-gradient(120deg, var(--ac-grad-start) 0%, var(--ac-grad-end) 100%)' }}>
+                <div className="container text-center text-white py-4">
+                    <h1 className="display-4 fw-bold mb-2" style={{ letterSpacing: '1px' }}>Shashwat Abacus</h1>
+                    <p className="lead mb-4" style={{ fontSize: '1.35rem' }}>Making children <span style={{ color: '#ffe066' }}>10x</span> better, faster & smarter.</p>
+                    <img src="/franchisee2.jpg" alt="Abacus Hero" className="rounded shadow-lg mb-3" style={{ maxHeight: '180px', border: '5px solid #fff', background: '#fff8' }} />
                 </div>
             </section>
-            <section className="py-5">
+
+            {/* About Abacus */}
+            <section className="py-5" style={{ background: 'var(--ac-light)' }}>
+                <div className="container">
+                    <div className="row justify-content-center mb-4">
+                        <div className="col-lg-10">
+                            <div className="card border-0 shadow-lg bg-white">
+                                <div className="card-body p-4">
+                                    <h2 className="h4 fw-bold mb-3 text-gradient">What is Abacus?</h2>
+                                    <p className="mb-2">The word <b>“Abacus”</b> comes from the Latin language. Abacus is a tool which helps children to grow mathematical calculations. It was invented in China nearly 2055 years ago. It helps children to remove the fear of numbers and creates interest in mathematics.</p>
+                                    <p className="mb-0">The Shashwat Abacus uses three elements to enhance life skills in children – <b>Abacus</b>, <b>Brain Gym</b>, and <b>Speed Writing</b>. The programme helps children to develop their learning abilities like concentration, observation, imagination, listening skills, visualization, speed & accuracy, retention & recall, self-confidence, and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row g-4 text-center">
+                        <div className="col-md-4">
+                            <div className="card h-100 border-0 shadow-sm bg-gradient-brand text-white">
+                                <div className="card-body">
+                                    <span className="display-3 mb-2 d-block"><i className="bi bi-activity"></i></span>
+                                    <h5 className="fw-bold">Brain Gym</h5>
+                                    <p className="mb-0">Exercises to relax the mind and energize the brain for new activities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card h-100 border-0 shadow-sm bg-white text-brand">
+                                <div className="card-body">
+                                    <span className="display-3 mb-2 d-block"><i className="bi bi-calculator"></i></span>
+                                    <h5 className="fw-bold">Abacus</h5>
+                                    <p className="mb-0">Ancient tool for developing strong mental arithmetic and visualization skills.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card h-100 border-0 shadow-sm bg-gradient-brand text-white">
+                                <div className="card-body">
+                                    <span className="display-3 mb-2 d-block"><i className="bi bi-pencil"></i></span>
+                                    <h5 className="fw-bold">Speed Writing</h5>
+                                    <p className="mb-0">Techniques to boost writing speed, accuracy, and confidence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Benefits Section */}
+            <section className="py-5" style={{ background: 'linear-gradient(120deg, var(--ac-grad-end) 0%, var(--ac-grad-start) 100%)' }}>
+                <div className="container">
+                    <div className="row justify-content-center mb-4">
+                        <div className="col-lg-8 text-center">
+                            <h3 className="h4 fw-bold text-white mb-3">Benefits & Results</h3>
+                        </div>
+                    </div>
+                    <div className="row g-4">
+                        <div className="col-md-6 col-lg-4">
+                            <div className="card border-0 shadow-sm h-100">
+                                <div className="card-body">
+                                    <ul className="list-unstyled mb-0">
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Improved focus and concentration</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Improved self-discipline</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Greater listening skills</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Helps to retain and recall anything</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-lg-4">
+                            <div className="card border-0 shadow-sm h-100">
+                                <div className="card-body">
+                                    <ul className="list-unstyled mb-0">
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Improves visualization power</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Increases arithmetic and numerical ability</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Enhances memory and imagination power</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Increased self-confidence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-12 col-lg-4">
+                            <div className="card border-0 shadow-sm h-100">
+                                <div className="card-body">
+                                    <ul className="list-unstyled mb-0">
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Overall academic achievement</li>
+                                        <li><i className="bi bi-check-circle-fill text-success me-2"></i>Certificates on completion of each level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Levels & Programme Structure */}
+            <section className="py-5" style={{ background: 'var(--ac-light)' }}>
                 <div className="container">
                     <div className="row g-4">
-                        {courses.map((c, i) => (
-                            <div className="col-12 col-md-6 col-lg-4" key={c.name}>
-                                <motion.div className="card h-100 shadow-sm"
-                                    initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.1 }} viewport={{ once: true }}>
-                                    <div className="card-body d-flex flex-column">
-                                        <div className="d-flex align-items-center gap-3 mb-2">
-                                            <span className="icon-circle"><i className={`bi ${c.icon}`}></i></span>
-                                            <h5 className="card-title mb-0">{c.name}</h5>
-                                        </div>
-                                        <p className="card-text">{c.desc}</p>
-                                        <ul className="list-unstyled small mb-4">
-                                            <li className="d-flex align-items-center gap-2"><i className="bi bi-clock"></i><span>Duration: {c.duration}</span></li>
-                                            <li className="d-flex align-items-center gap-2"><i className="bi bi-people"></i><span>Age Group: {c.age}</span></li>
-                                            <li className="d-flex align-items-center gap-2"><i className="bi bi-calendar-week"></i><span>Sessions: {c.sessions}</span></li>
-                                        </ul>
-                                        <div className="mt-auto d-flex align-items-center justify-content-between">
-                                            <span className="fw-semibold">{c.fee}</span>
-                                            <a href="/contact" className="btn btn-gradient">Enroll</a>
-                                        </div>
-                                    </div>
-                                </motion.div>
+                        <div className="col-lg-6">
+                            <div className="card border-0 shadow-lg h-100">
+                                <div className="card-body">
+                                    <h4 className="fw-bold mb-3 text-gradient">Levels Structure</h4>
+                                    <ul className="mb-0">
+                                        <li>Beginners – Junior Abacus</li>
+                                        <li>Beginners – Basic levels 4</li>
+                                        <li>Progressive – Advanced levels 4</li>
+                                        <li>Expert – Master levels 2</li>
+                                    </ul>
+                                </div>
                             </div>
-                        ))}
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="card border-0 shadow-lg h-100">
+                                <div className="card-body">
+                                    <h4 className="fw-bold mb-3 text-gradient">Programme Structure</h4>
+                                    <ul className="mb-0">
+                                        <li><b>Age Group:</b> 6 to 14 years</li>
+                                        <li><b>Total Levels:</b> Junior Abacus + 10 levels</li>
+                                        <li><b>Duration per level:</b> 2 to 3 months</li>
+                                        <li><b>Weekly Sessions:</b> One session of 2 hours</li>
+                                        <li><b>Maximum Students per class:</b> 15 Students</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
